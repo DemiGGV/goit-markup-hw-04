@@ -8,6 +8,7 @@
     --Accent:#E7E9FC;
     --Light:#F4F4FD;
     --bgc-white: #fff;
+    --hero-with: 1600рх;
 }
 
 .visually-hidden {
@@ -143,10 +144,20 @@ body {
     color: var(--primary-brand);
 }
 
-.addr-mail,
-.addr-tel {
+.addr-tel,
+.addr-mail {
     color: var(--_text);
     text-align: center;
+}
+
+.addr-mail::before {
+    content: "\260E";
+    margin-right: 10px;
+}
+
+.addr-tel::before {
+    content: "\2709";
+    margin-right: 10px;
 }
 
 .addr-mail:hover,
@@ -162,7 +173,7 @@ body {
 
 /*------------------- index.html styles -------------------*/
 
-.section + .section {
+.section {
     padding: 120px 0;
 }
 
@@ -177,10 +188,20 @@ body {
 }
 
 /*------------------- title section styles */
+
 .main.section {
-    background-color: var(--Dark);
+    margin-right: auto;
+    margin-left: auto;
+    max-width: var(--hero-with);
     text-align: center;
     padding: 190px 0;
+/* background: background-color background-image background-repeat background-position background-attachment */
+    background-image:
+        linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url("../images/people-office.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .main-title {
@@ -230,6 +251,31 @@ body {
     max-width: 264px;
 }
 
+.benefits .card-item::before {
+    content: "";
+    display: inline-block;
+    width: 264px;
+    height: 112px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 64px 64px;
+    background-color: var(--Light);
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.antenna.card-item::before {
+    background-image: url(../images/svg/antenna.svg);
+}
+.clock.card-item::before {
+    background-image: url(../images/svg/clock.svg);
+}
+.diagram.card-item::before {
+    background-image: url(../images/svg/diagram.svg);
+}
+.astronaut.card-item::before {
+    background-image: url(../images/svg/astronaut.svg);
+}
 .card-list {
     display: flex;
 }
@@ -273,6 +319,21 @@ body {
 .team .title,
 .team .text {
     text-align: center;
+}
+
+.team .card-content::after {
+    content: "";
+    display: inline-block;
+    width: 264px;
+    height: 64px;
+    background-image: url("../images/svg/ellipse-insta.svg");
+    background-image: url("../images/svg/ellipse-twit.svg");
+    background-image: url("../images/svg/ellipse-fb.svg");
+    background-image: url("../images/svg/ellipse-ldin.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 64px 64px;
+    margin-top: 4px;
 }
 
 .card-content {
@@ -347,6 +408,7 @@ body {
 
 .protfolio .card-item {
     max-width: calc((100% - 48px) / 3);
+    overflow: hidden;
     margin-bottom: 48px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
