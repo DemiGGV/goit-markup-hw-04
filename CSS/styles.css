@@ -8,7 +8,6 @@
     --Accent:#E7E9FC;
     --Light:#F4F4FD;
     --bgc-white: #fff;
-    --hero-with: 1600рх;
 }
 
 .visually-hidden {
@@ -190,12 +189,11 @@ body {
 /*------------------- title section styles */
 
 .main.section {
+    max-width: 1600px;
     margin-right: auto;
     margin-left: auto;
-    max-width: var(--hero-with);
     text-align: center;
     padding: 190px 0;
-/* background: background-color background-image background-repeat background-position background-attachment */
     background-image:
         linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
         url("../images/people-office.jpg");
@@ -304,8 +302,6 @@ body {
     background-color: var(--bgc-white);
 }
 
-/* .card-img {} */
-
 /*------------------- Our team section */
 .team.section {
     background: var(--Light);
@@ -321,19 +317,37 @@ body {
     text-align: center;
 }
 
-.team .card-content::after {
-    content: "";
+.card-socials {
+    display: flex;
+    width: 232px;
+    height: 48px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.card-socials.link {
     display: inline-block;
-    width: 264px;
-    height: 64px;
-    background-image: url("../images/svg/ellipse-insta.svg");
-    background-image: url("../images/svg/ellipse-twit.svg");
-    background-image: url("../images/svg/ellipse-fb.svg");
-    background-image: url("../images/svg/ellipse-ldin.svg");
+    width: 40px;
+    height: 40px;
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: 64px 64px;
-    margin-top: 4px;
+    background-size: contain;
+    border-radius: 50%;
+}
+
+.instagram {
+    background-image: url("../images/svg/ellipse-insta.svg");
+}
+
+.card-socials.twiter {
+    background-image: url("../images/svg/ellipse-twit.svg");
+}
+
+.card-socials.facebook {
+    background-image: url("../images/svg/ellipse-fb.svg");
+}
+
+.card-socials.linkedin {
+    background-image: url("../images/svg/ellipse-ldin.svg");
 }
 
 .card-content {
