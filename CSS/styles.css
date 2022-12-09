@@ -132,7 +132,8 @@ body {
     margin-right: 40px;
 }
 
-.header .menu-link {
+/* .header  */
+.menu-link {
     color: var(--Dark);
     font-weight: 600;
     text-align: center;
@@ -315,43 +316,67 @@ body {
 .team .title,
 .team .text {
     text-align: center;
+    margin-bottom: 8px;
 }
 
 .card-socials {
     display: flex;
+    justify-content: space-between;
     width: 232px;
     height: 48px;
     margin-right: auto;
     margin-left: auto;
 }
 
-.card-socials.link {
+.card-socials .link {
     display: inline-block;
     width: 40px;
     height: 40px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 16px 16px;
+    background-position: center;
     border-radius: 50%;
 }
 
-.instagram {
-    background-image: url("../images/svg/ellipse-insta.svg");
+.card-socials .instagram {
+    background-image: url("../images/svg/instagram.svg");
+    background-color: var(--primary-brand);
 }
 
-.card-socials.twiter {
-    background-image: url("../images/svg/ellipse-twit.svg");
+.card-socials .twiter {
+    background-image: url("../images/svg/twitter.svg");
+    background-color: var(--primary-brand);
 }
 
-.card-socials.facebook {
-    background-image: url("../images/svg/ellipse-fb.svg");
+.card-socials .facebook {
+    background-image: url("../images/svg/facebook.svg");
+    background-color: var(--primary-brand);
 }
 
-.card-socials.linkedin {
-    background-image: url("../images/svg/ellipse-ldin.svg");
+.card-socials .linkedin {
+    background-image: url("../images/svg/linkedin.svg");
+    background-color: var(--primary-brand);
 }
 
 .card-content {
     padding: 32px 0;
+}
+
+/*------------------- Customers section styles */
+
+.customers .card-link {
+    display: flex;
+    height: 88px;
+    width: 168px;
+    border: 1px solid var(--Subtle-Text);
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.customers .card-img {
+    height: 56px;
+    width: 104px;
 }
 
 /*------------------- Footer section styles */
@@ -363,6 +388,18 @@ body {
     padding: 100px 0;
 }
 
+/* --- Main footer container */
+
+.footer-contain {
+    display: flex;
+}
+
+/* ---First footer column */
+
+.footer-text {
+    display: block;
+}
+
 .footer .logo {
     color: var(--Light);
     line-height: 1.17;
@@ -372,6 +409,47 @@ body {
 .footer .text {
     max-width: 264px;
     letter-spacing: 0.02em;
+}
+
+/* ---Footer address */
+
+.footer-address {
+    display: flex;
+    font-style: normal;
+}
+
+/* ---Second footer column */
+
+.footer .card-socials {
+    display: block;
+    margin-left: 120px;
+}
+
+.footer-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--bgc-white);
+    margin-bottom: 16px;
+}
+
+.footer .card-item {
+    background-color: inherit;
+}
+
+.footer .card-item:not(:last-child) {
+    margin-right: 16px;
+}
+
+.footer .card-item>.link {
+    background-color: rgba(255, 255, 255, 0.1);
+    background-size: 24px 24px;
+}
+
+.footer .card-item>.link:hover,
+.footer .card-item>.link:focus {
+    background-color: var(--Success);
 }
 
 /*------------------- portfolio.html styles -------------------*/
