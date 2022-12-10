@@ -455,7 +455,7 @@ body {
 }
 
 .filter-button:hover,
-.filter-button:focus
+.filter-button:focus,
 .filter-button:active {
     color: var(--bgc-white);
     background-color: var(--primary-brand);
