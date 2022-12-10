@@ -309,7 +309,7 @@ body {
     display: flex;
     justify-content: space-between;
     width: 232px;
-    height: 48px;
+    padding: 4px 0;
     margin-right: auto;
     margin-left: auto;
 }
@@ -391,17 +391,9 @@ body {
     letter-spacing: 0.02em;
 }
 
-/* ---Footer address */
-
-.footer-address {
-    display: flex;
-    font-style: normal;
-}
-
 /* ---Second footer column */
 
 .footer-socials {
-    display: block;
     margin-left: 120px;
 }
 
