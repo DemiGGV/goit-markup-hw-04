@@ -150,16 +150,6 @@ body {
     text-align: center;
 }
 
-/* .addr-mail::before {
-    content: "\260E";
-    margin-right: 10px;
-}
-
-.addr-tel::before {
-    content: "\2709";
-    margin-right: 10px;
-} */
-
 .addr-mail:hover,
 .addr-tel:hover,
 .addr-mail:focus,
